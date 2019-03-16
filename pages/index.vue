@@ -91,6 +91,13 @@ export default {
           imgurl:
             "https://cdn.jsdelivr.net/gh/fujicoin/fujicoin@master/src/qt/res/icons/fujicoin.png?raw=true",
           test: true
+        },
+        {
+          name: "Bitcoin",
+          url: "https://btc.blockbook.ovh/",
+          imgurl:
+            "https://cdn.jsdelivr.net/gh/bitcoin/bitcoin@master/src/qt/res/icons/bitcoin.png?raw=true",
+          test: true
         }
       ].sort((a, b) => {
         if (a.name < b.name) return -1;
