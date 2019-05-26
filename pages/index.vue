@@ -70,21 +70,7 @@ export default {
           imgurl:
             "https://cdn.jsdelivr.net/gh/monacoinproject/monacoin@master-0.16/src/qt/res/src/bitcoin.svg?raw=true",
           test: false
-        },/*
-        {
-          name: "Susucoin",
-          url: "https://susu-blockbook.currency.ovh",
-          imgurl:
-            "https://cdn.jsdelivr.net/gh/susucoin-project/susucoin@master/src/qt/res/icons/bitcoin.png?raw=true",
-          test: false
         },
-        {
-          name: "Susucoin(Testnet)",
-          url: "https://testnet-susu-blockbook.currency.ovh",
-          imgurl:
-            "https://cdn.jsdelivr.net/gh/susucoin-project/susucoin@master/src/qt/res/icons/bitcoin.png?raw=true",
-          test: true
-        },*/
         {
           name: "Fujicoin",
           url: "https://fuji.blockbook.ovh/",
