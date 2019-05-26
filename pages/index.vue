@@ -19,6 +19,9 @@
         <a href="https://github.com/zinntikumugai/blockbook" target="_blank" class="button--grey">GitHub</a>
         <a href="https://github.com/trezor/blockbook" target="_blank" class="button--grey">Orignal GitHub</a>
       </div>
+      <div>
+        &copy; 2019 blockbook.ovh
+      </div>
     </div>
   </section>
 </template>
