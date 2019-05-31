@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="text-center mt-3">blockbook.ovh</h1>
-    <p class="text-right mb-1">blockbook hosted by @zinntikumugai</p>
+    <p class="text-right mb-1">blockbook hosted by zinntikumugai</p>
     <h4 class="list-title">Main Net</h4>
     <div class="row p-2 pb-3">
       <div class="col-6 col-md-4 col-lg-3 p-2" v-for="coin in coinsMainNet" :key="coin">
@@ -41,68 +41,58 @@
 export default {
   components: {},
   data() {
+    const sort = (a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      }
     return {
       coinsMainNet: [
         {
           name: "BitZeny",
           url: "https://zny.blockbook.ovh/",
           imgurl:
-            "https://cdn.jsdelivr.net/gh/bitzenyPlus/BitZenyPlus@z2.0.x/src/qt/res/icons/bitcoin.png?raw=true",
-          test: false
+            "https://cdn.jsdelivr.net/gh/bitzenyPlus/BitZenyPlus@z2.0.x/src/qt/res/icons/bitcoin.png?raw=true"
         },
         {
           name: "Bellcoin",
           url: "https://bell.blockbook.ovh/",
           imgurl:
-            "https://cdn.jsdelivr.net/gh/bellcoin-org/bellcoin@master/src/qt/res/src/bitcoin.svg?raw=true",
-          test: false
+            "https://cdn.jsdelivr.net/gh/bellcoin-org/bellcoin@master/src/qt/res/src/bitcoin.svg?raw=true"
         },
         {
           name: "Koto",
           url: "https://koto.blockbook.ovh/",
           imgurl:
-            "https://cdn.jsdelivr.net/gh/KotoDevelopers/koto@master/src/qt/res/icons/koto.png?raw=true",
-          test: false
+            "https://cdn.jsdelivr.net/gh/KotoDevelopers/koto@master/src/qt/res/icons/koto.png?raw=true"
         },
         {
           name: "Monacoin",
           url: "https://mona.blockbook.ovh/",
           imgurl:
-            "https://cdn.jsdelivr.net/gh/monacoinproject/monacoin@master-0.16/src/qt/res/src/bitcoin.svg?raw=true",
-          test: false
+            "https://cdn.jsdelivr.net/gh/monacoinproject/monacoin@master-0.16/src/qt/res/src/bitcoin.svg?raw=true"
         },
         {
           name: "Fujicoin",
           url: "https://fuji.blockbook.ovh/",
           imgurl:
-            "https://cdn.jsdelivr.net/gh/fujicoin/fujicoin@master/src/qt/res/icons/fujicoin.png?raw=true",
-          test: true
+            "https://cdn.jsdelivr.net/gh/fujicoin/fujicoin@master/src/qt/res/icons/fujicoin.png?raw=true"
         }
-      ].sort((a, b) => {
-        if (a.name < b.name) return -1;
-        if (a.name > b.name) return 1;
-        return 0;
-      }),
+      ].sort(sort),
       coinsTestNet: [
         {
           name: "BitZeny",
           url: "https://test-zny.blockbook.ovh/",
           imgurl:
-            "https://cdn.jsdelivr.net/gh/bitzenyPlus/BitZenyPlus@z2.0.x/src/qt/res/icons/bitcoin.png?raw=true",
-          test: true
+            "https://cdn.jsdelivr.net/gh/bitzenyPlus/BitZenyPlus@z2.0.x/src/qt/res/icons/bitcoin.png?raw=true"
         },
         {
           name: "Koto",
           url: "https://test-koto.blockbook.ovh/",
           imgurl:
-            "https://cdn.jsdelivr.net/gh/KotoDevelopers/koto@master/src/qt/res/icons/koto.png?raw=true",
-          test: true
+            "https://cdn.jsdelivr.net/gh/KotoDevelopers/koto@master/src/qt/res/icons/koto.png?raw=true"
         }
-      ].sort((a, b) => {
-        if (a.name < b.name) return -1;
-        if (a.name > b.name) return 1;
-        return 0;
-      })
+      ].sort(sort)
     };
   }
 };
