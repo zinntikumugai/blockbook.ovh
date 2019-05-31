@@ -1,0 +1,73 @@
+.bg-twitter {
+    background-color: #55acee;
+}
+
+.bg-mastodon {
+    background-color: #2b90d9;
+}
+
+.bg-facebook {
+    background-color: #3b5998;
+}
+
+.bg-linkedin {
+    background-color: #0079ba;
+}
+
+.bg-github {
+    background-color: #333;
+}
+
+.bg-qiita {
+    background-color: #79bd28;
+}
+
+.bg-misskey {
+    background-color: #00acc1;
+}
+
+.bg-soundcloud {
+    background-color: #ff3300;
+}
+
+.bg-spotify {
+    background-color: #1db954;
+}
+
+.bg-beatport {
+    background-color: #444444;
+}
+
+.bg-itunes {
+    background-color: #1d32ac;
+}
+
+.bg-youtube {
+    background-color: #ff0000;
+}
+
+.bg-email {
+    background-color: #ea4335;
+}
+
+.bg-line {
+    background-color: #00c300;
+}
+
+.bg-google {
+    background-color: #ea4335;
+}
+
+.bg-purple {
+    background-color: #974597;
+}
+
+.bg-hatena {
+    background-color: #008fde;
+}
+
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+}
