@@ -15,7 +15,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href:'https://fonts.googleapis.com/css?family=Raleway:200&display=swap', }
     ]
   },
 
@@ -28,6 +29,13 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@fortawesome/fontawesome-free-webfonts',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
+    '~/assets/bootstrap_button_sns.css',
+    '~/assets/shino3.css',
+    '~/assets/layout.scss',
   ],
 
   /*
@@ -48,9 +56,9 @@ module.exports = {
     ['@nuxtjs/google-adsense', {
       id: 'ca-pub-9365736857722008',
       pageLevelAds: true
-    }]
+    }],
   ],
-  /*
+    /*
   ** Axios module configuration
   */
   axios: {
@@ -65,7 +73,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }

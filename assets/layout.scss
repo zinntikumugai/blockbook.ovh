@@ -1,0 +1,251 @@
+$theme_color: #E19F7F;
+$theme_dark: #aa6746;
+$theme_light: #f0c5af;
+
+$tab_color: #529b58;
+$tab_dark: #47884c;
+$tab_light: #bde0c0;
+
+$contents_title: #75cac3;
+$contents_dark: #2a6171;
+$contents_light: #d7f7f5;
+
+$backgroud-color: #fefefe;
+
+$primary: #257aa6;
+$secondary: #999999;
+$success: #00a352;
+$info: #d7f7f5;
+$worning: #fabc60;
+$danger: #e16262;
+$light: #ddd;
+$dark: #444;
+$iconColor: #53b300;
+
+:root {
+  font-size: 0.9em;
+}
+
+body {
+  background-color: $backgroud-color;
+}
+
+.card-body {
+  background-color: $backgroud-color;
+}
+
+textarea:disabled {
+  background-color: $backgroud-color;
+}
+
+// ul.page-tab {
+//   padding: 0px;
+//   margin: 0px;
+//   list-style-type: none;
+//   // width: 100%;
+// }
+
+// li.page-tab {
+//   display: inline-flex;
+//   &.active{
+
+//   }
+// }
+
+.page-tab {
+  background-color: $tab_color;
+  // background-color: #fefefe;
+  color: #fff;
+  &.active{
+    background-color: $tab_dark;
+  }
+  :hover{
+    background-color: $tab_dark;
+  }
+}
+
+.list-title{
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: $contents_title;
+  border-bottom: solid 1px $light;
+}
+
+.list-outline{
+  margin: 0;
+  padding: 0;
+  width:100%;
+}
+
+.list-item{
+  margin: 0;
+  // padding: 10px;
+  width: 100%;
+  border-bottom: solid 1px $light;
+  &.item-active{
+    background-color: $contents_light;
+  }
+}
+
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+
+.radio, .checkbox {
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px 10px 42px;
+  width: 100%;
+  background-color: $backgroud-color;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $contents_light;
+    &:after {
+      border-color: $contents_dark;
+    }
+  }
+
+  &:after {
+    -webkit-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: block;
+    margin-top: -10px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $contents_dark;
+    border-radius: 2px;
+    content: '';
+  }
+}
+.radio {
+  &:before {
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: block;
+    margin-top: -10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: $contents_dark;
+    content: '';
+    opacity: 0;
+    input[type=radio]:checked + & {
+      opacity: 1;
+    }
+  }
+}
+
+.input-range[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $contents_light;
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    display: block;
+    background-color: $contents_dark;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+}
+
+
+.bg-primary {
+  background-color: $primary;
+  border-color: $primary;
+}
+.bg-secondary {
+  background-color: $secondary;
+  border-color: $secondary;
+}
+.bg-success {
+  background-color: $success;
+  border-color: $success;
+}
+.bg-info {
+  background-color: $info;
+  border-color: $info;
+}
+.bg-worning {
+  background-color: $worning;
+  border-color: $worning;
+}
+.bg-danger {
+  background-color: $danger;
+  border-color: $danger;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+}
+.btn-secondary {
+  background-color: $secondary;
+  border-color: $secondary;
+}
+.btn-success {
+  background-color: $success;
+  border-color: $success;
+}
+.btn-info {
+  background-color: $info;
+  border-color: $info;
+}
+.btn-worning {
+  background-color: $worning;
+  border-color: $worning;
+}
+.btn-danger {
+  background-color: $danger;
+  border-color: $danger;
+}
+
+.btn-outline-primary {
+  color: $primary;
+  border-color: $primary;
+}
+.btn-outline-secondary {
+  color: $secondary;
+  border-color: $secondary;
+}
+.btn-outline-success {
+  color: $success;
+  border-color: $success;
+}
+.btn-outline-info {
+  color: $info;
+  border-color: $info;
+}
+.btn-outline-worning {
+  color: $worning;
+  border-color: $worning;
+}
+.btn-outline-danger {
+  color: $danger;
+  border-color: $danger;
+}
