@@ -6,8 +6,10 @@
     <div class="row p-2 pb-3">
       <div class="col-6 col-md-4 col-lg-3 p-2" v-for="coin in coinsMainNet" :key="coin">
         <div class="pb-3 text-center">
-          <h4 class>{{coin.name}}</h4>
-          <b-img :src="coin.imgurl" width="120"/>
+          <b-link :href="coin.url">
+            <h4 class>{{coin.name}}</h4>
+            <b-img :src="coin.imgurl" width="120"/>
+          </b-link>
         </div>
       </div>
     </div>
@@ -15,23 +17,35 @@
     <div class="row p-2 pb-5">
       <div class="col-6 col-md-4 col-lg-3 p-2" v-for="coin in coinsTestNet" :key="coin">
         <div class="pb-3 text-center">
-          <h4>{{coin.name}}</h4>
-          <b-img :src="coin.imgurl" width="120"/>
+          <b-link :href="coin.url">
+            <h4>{{coin.name}}</h4>
+            <b-img :src="coin.imgurl" width="120"/>
+          </b-link>
         </div>
       </div>
     </div>
     <div class="text-center pb-5">
-      <a href="https://twitter.com/uesitananame55" target="_blank" class="btn bg-twitter text-white"><i class="fab fa-twitter fa-fw"></i> @uesitananame55</a>
+      <a
+        href="https://twitter.com/uesitananame55"
+        target="_blank"
+        class="btn bg-twitter text-white"
+      >
+        <i class="fab fa-twitter fa-fw"></i> @uesitananame55
+      </a>
       <a
         href="https://github.com/zinntikumugai/blockbook"
         target="_blank"
         class="btn bg-github text-white"
-      ><i class="fab fa-github fa-fw"></i> GitHub</a>
+      >
+        <i class="fab fa-github fa-fw"></i> GitHub
+      </a>
       <a
         href="https://github.com/trezor/blockbook"
         target="_blank"
         class="btn bg-github text-white"
-      ><i class="fab fa-github fa-fw"></i> Orignal GitHub</a>
+      >
+        <i class="fab fa-github fa-fw"></i> Orignal GitHub
+      </a>
     </div>
     <div class="pb-5 text-center">&copy; 2019 blockbook.ovh</div>
   </div>
@@ -42,10 +56,10 @@ export default {
   components: {},
   data() {
     const sort = (a, b) => {
-        if (a.name < b.name) return -1;
-        if (a.name > b.name) return 1;
-        return 0;
-      }
+      if (a.name < b.name) return -1;
+      if (a.name > b.name) return 1;
+      return 0;
+    };
     return {
       coinsMainNet: [
         {
@@ -96,5 +110,4 @@ export default {
 h4 {
   font-weight: normal;
 }
-
 </style>
