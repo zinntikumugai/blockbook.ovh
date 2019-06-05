@@ -71,12 +71,6 @@ export default {
           url: "https://mona.blockbook.ovh/",
           imgurl:
             "https://cdn.jsdelivr.net/gh/monacoinproject/monacoin@master-0.16/src/qt/res/src/bitcoin.svg?raw=true"
-        },
-        {
-          name: "Fujicoin",
-          url: "https://fuji.blockbook.ovh/",
-          imgurl:
-            "https://cdn.jsdelivr.net/gh/fujicoin/fujicoin@master/src/qt/res/icons/fujicoin.png?raw=true"
         }
       ].sort(sort),
       coinsTestNet: [
