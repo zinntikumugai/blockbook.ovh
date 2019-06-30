@@ -2,25 +2,35 @@
   <div class="container">
     <h1 class="text-center mt-3">blockbook.ovh</h1>
     <p class="text-right mb-1">blockbook hosted by zinntikumugai</p>
-    <h4 class="list-title">Main Net</h4>
-    <div class="row p-2 pb-3">
-      <div class="col-6 col-md-4 col-lg-3 p-2" v-for="coin in coinsMainNet" :key="coin">
-        <div class="pb-3 text-center">
-          <b-link :href="coin.url">
-            <h4 class>{{coin.name}}</h4>
-            <b-img :src="coin.imgurl" width="120"/>
-          </b-link>
+    <div v-if="maintenance">
+      <h2>メンテナンス中です</h2>
+      <p>終了のお知らせ等はTwitterから掘り出してみてください</p>
+      <h2>ステータス</h2>
+      <p>お好きな方をどうぞ</p>
+      <a href="http://status.blockbook.ovh/">Status</a>
+      <a href="https://uptime.blockbook.ovh/">UpTime</a>
+    </div>
+    <div v-else>
+      <h4 class="list-title">Main Net</h4>
+      <div class="row p-2 pb-3">
+        <div class="col-6 col-md-4 col-lg-3 p-2" v-for="coin in coinsMainNet" :key="coin">
+          <div class="pb-3 text-center">
+            <b-link :href="coin.url">
+              <h4 class>{{coin.name}}</h4>
+              <b-img :src="coin.imgurl" width="120" />
+            </b-link>
+          </div>
         </div>
       </div>
-    </div>
-    <h3 class="list-title">Test Net</h3>
-    <div class="row p-2 pb-5">
-      <div class="col-6 col-md-4 col-lg-3 p-2" v-for="coin in coinsTestNet" :key="coin">
-        <div class="pb-3 text-center">
-          <b-link :href="coin.url">
-            <h4>{{coin.name}}</h4>
-            <b-img :src="coin.imgurl" width="120"/>
-          </b-link>
+      <h3 class="list-title">Test Net</h3>
+      <div class="row p-2 pb-5">
+        <div class="col-6 col-md-4 col-lg-3 p-2" v-for="coin in coinsTestNet" :key="coin">
+          <div class="pb-3 text-center">
+            <b-link :href="coin.url">
+              <h4>{{coin.name}}</h4>
+              <b-img :src="coin.imgurl" width="120" />
+            </b-link>
+          </div>
         </div>
       </div>
     </div>
@@ -52,15 +62,16 @@
 </template>
 
 <script>
+const sort = (a, b) => {
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
+};
 export default {
   components: {},
-  data() {
-    const sort = (a, b) => {
-      if (a.name < b.name) return -1;
-      if (a.name > b.name) return 1;
-      return 0;
-    };
+  async asyncData() {
     return {
+      maintenance: true,
       coinsMainNet: [
         {
           name: "BitZeny",
