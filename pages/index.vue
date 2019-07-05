@@ -47,14 +47,21 @@
         target="_blank"
         class="btn bg-github text-white"
       >
-        <i class="fab fa-github fa-fw"></i> GitHub
+        <i class="fab fa-github fa-fw"></i> zinntikumugai GitHub
       </a>
       <a
         href="https://github.com/trezor/blockbook"
         target="_blank"
         class="btn bg-github text-white"
       >
-        <i class="fab fa-github fa-fw"></i> Orignal GitHub
+        <i class="fab fa-github fa-fw"></i> trezor GitHub
+      </a>
+      <a
+        href="https://www.zinntikumugai.com/donation/"
+        target="_blank"
+        class="btn bg-info text-white"
+      >
+        <i class="fas fa-donate"></i> Donation
       </a>
     </div>
     <div class="pb-5 text-center">&copy; 2019 blockbook.ovh</div>
