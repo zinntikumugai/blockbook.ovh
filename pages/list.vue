@@ -28,6 +28,14 @@
           <b-link :href="coin.url">
             <h4>{{coin.name}}</h4>
             <b-img :src="coin.imgurl" width="120" />
+            <h5>Backend</h5>
+            <div>
+              <b-table stacked :items="coin.backend"></b-table>
+            </div>
+            <h5>BlockBook</h5>
+            <div>
+              <b-table stacked :items="coin.blockbook"></b-table>
+            </div>
           </b-link>
         </div>
       </div>
