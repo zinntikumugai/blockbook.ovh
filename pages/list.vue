@@ -110,6 +110,7 @@ export default {
         }
       ].sort(sort)
     };
+
     for (const i in data.coinsMainNet) {
       let url = data.coinsMainNet[i].url + "api/";
       let e;
@@ -134,6 +135,52 @@ export default {
         }
       ];
       data.coinsMainNet[i].blockbook = [
+        {
+          version: e.blockbook.version,
+          buildtime: (() => {
+            let v = e.blockbook.version.split(".")[1];
+            let buildtime;
+            switch (v) {
+              case "2":
+                buildtime = e.blockbook.buildtime;
+                break;
+              case "3":
+                buildtime = e.blockbook.buildTime;
+                break;
+              default:
+                buildtime = null;
+            }
+            return buildtime;
+          })()
+        }
+      ];
+    }
+
+    
+    for (const i in data.coinsTestNet) {
+      let url = data.coinsTestNet[i].url + "api/";
+      let e;
+      try {
+        e = await app.$axios.$get(url);
+      } catch (erorr) {
+        e = {
+          backend: {
+            version: "faild",
+            blocks: "-"
+          },
+          blockbook: {
+            version: "faild",
+            blocks: "-"
+          }
+        }
+      }
+      data.coinsTestNet[i].backend = [
+        {
+          version: e.backend.version,
+          blocks: e.backend.blocks
+        }
+      ];
+      data.coinsTestNet[i].blockbook = [
         {
           version: e.blockbook.version,
           buildtime: (() => {
