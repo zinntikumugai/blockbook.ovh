@@ -8,7 +8,7 @@
         <div class="pb-3 text-center">
           <b-link :href="coin.url">
             <h4 class>{{coin.name}}</h4>
-            <b-img :src="coin.imgurl" width="120"/>
+            <b-img :src="coin.imgurl" width="120" />
             <h5>Backend</h5>
             <div>
               <b-table stacked :items="coin.backend"></b-table>
@@ -27,7 +27,7 @@
         <div class="pb-3 text-center">
           <b-link :href="coin.url">
             <h4>{{coin.name}}</h4>
-            <b-img :src="coin.imgurl" width="120"/>
+            <b-img :src="coin.imgurl" width="120" />
           </b-link>
         </div>
       </div>
@@ -112,7 +112,21 @@ export default {
     };
     for (const i in data.coinsMainNet) {
       let url = data.coinsMainNet[i].url + "api/";
-      let e = await app.$axios.$get(url);
+      let e;
+      try {
+        e = await app.$axios.$get(url);
+      } catch (erorr) {
+        e = {
+          backend: {
+            version: "faild",
+            blocks: "-"
+          },
+          blockbook: {
+            version: "faild",
+            blocks: "-"
+          }
+        }
+      }
       data.coinsMainNet[i].backend = [
         {
           version: e.backend.version,
