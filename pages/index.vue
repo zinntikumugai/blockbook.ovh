@@ -71,7 +71,7 @@ export default {
   components: {},
   async asyncData() {
     return {
-      maintenance: true,
+      maintenance: false,
       coinsMainNet: [
         {
           name: "BitZeny",
