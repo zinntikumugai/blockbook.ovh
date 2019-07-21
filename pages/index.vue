@@ -13,7 +13,7 @@
     <div v-else>
       <h4 class="list-title">Main Net</h4>
       <div class="row p-2 pb-3">
-        <div class="col-6 col-md-4 col-lg-3 p-2" v-for="coin in coinsMainNet" :key="coin">
+        <div class="col-6 col-md-4 col-lg-3 p-2" v-for="(coin, index) in coinsMainNet" :key="index">
           <div class="pb-3 text-center">
             <b-link :href="coin.url">
               <h4 class>
@@ -21,6 +21,9 @@
                 <b-img
                   v-if="coin.uptime"
                   :src="`https://img.shields.io/uptimerobot/ratio/${coin.uptime}.svg?style=flat-square&label=`"
+                /><b-img
+                  v-if="coin.uptime"
+                  :src="`https://img.shields.io/uptimerobot/status/${coin.uptime}.svg?style=flat-square&label=`"
                 />
               </h4>
               <b-img :src="coin.imgurl" width="120" />
@@ -30,7 +33,7 @@
       </div>
       <h3 class="list-title">Test Net</h3>
       <div class="row p-2 pb-5">
-        <div class="col-6 col-md-4 col-lg-3 p-2" v-for="coin in coinsTestNet" :key="coin">
+        <div class="col-6 col-md-4 col-lg-3 p-2" v-for="(coin, index) in coinsTestNet" :key="index">
           <div class="pb-3 text-center">
             <b-link :href="coin.url">
               <h4>
@@ -38,6 +41,9 @@
                 <b-img
                   v-if="coin.uptime"
                   :src="`https://img.shields.io/uptimerobot/ratio/${coin.uptime}.svg?style=flat-square&label=`"
+                /><b-img
+                  v-if="coin.uptime"
+                  :src="`https://img.shields.io/uptimerobot/status/${coin.uptime}.svg?style=flat-square&label=`"
                 />
               </h4>
               <b-img :src="coin.imgurl" width="120" />
