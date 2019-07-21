@@ -57,6 +57,7 @@ module.exports = {
       id: 'ca-pub-9365736857722008',
       pageLevelAds: true
     }],
+    '@nuxtjs/sitemap'
   ],
     /*
   ** Axios module configuration
@@ -75,5 +76,10 @@ module.exports = {
     extend(config, ctx) {
 
     }
+  },
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "blockbook.ovh",
+    generate: true
   }
 }
