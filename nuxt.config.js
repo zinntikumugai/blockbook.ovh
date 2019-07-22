@@ -81,9 +81,6 @@ module.exports = {
     path: "/sitemap.xml",
     hostname: "https://blockbook.ovh",
     gzip: true,
-    generate: true,
-    routers() {
-      return ["/"]
-    }
+    generate: true
   }
 }
