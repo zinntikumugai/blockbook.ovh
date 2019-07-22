@@ -80,6 +80,11 @@ module.exports = {
   sitemap: {
     path: "/sitemap.xml",
     hostname: "blockbook.ovh",
-    generate: true
+    generate: true,
+    routers(callback) {
+      callback(null, [
+        "/"
+      ])
+    }
   }
 }
