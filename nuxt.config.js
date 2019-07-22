@@ -16,7 +16,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href:'https://fonts.googleapis.com/css?family=Raleway:200&display=swap', }
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Raleway:200&display=swap', }
     ]
   },
 
@@ -59,9 +59,9 @@ module.exports = {
     }],
     '@nuxtjs/sitemap'
   ],
-    /*
-  ** Axios module configuration
-  */
+  /*
+** Axios module configuration
+*/
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
@@ -80,11 +80,10 @@ module.exports = {
   sitemap: {
     path: "/sitemap.xml",
     hostname: "blockbook.ovh",
+    gzip: true,
     generate: true,
-    routers(callback) {
-      callback(null, [
-        "/"
-      ])
+    routers() {
+      return ["/"]
     }
   }
 }
