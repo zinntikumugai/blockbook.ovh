@@ -7,7 +7,6 @@
       <p>終了のお知らせ等はTwitterから掘り出してみてください</p>
       <h2>ステータス</h2>
       <p>お好きな方をどうぞ</p>
-      <a href="http://status.blockbook.ovh/">Status</a>
       <a href="https://uptime.blockbook.ovh/">UpTime</a>
     </div>
     <div v-else>
