@@ -55,7 +55,7 @@
     </div>
     <div class="text-center pb-5">
       <ul class="list-inline">
-        <li  class="list-inline-item">
+        <li  class="list-inline-item pb-2">
           <a
             :href="`https://twitter.com/${sns.twitter}`"
             target="_blank"
@@ -65,7 +65,7 @@
             {{sns.twitter}}
           </a>
         </li>
-        <li  class="list-inline-item">
+        <li  class="list-inline-item pb-2">
           <a
             href="https://github.com/zinntikumugai/blockbook"
             target="_blank"
@@ -74,7 +74,7 @@
             <i class="fab fa-github fa-fw"></i> zinntikumugai GitHub
           </a>
         </li>
-        <li  class="list-inline-item">
+        <li  class="list-inline-item pb-2">
           <a
             href="https://github.com/trezor/blockbook"
             target="_blank"
@@ -83,7 +83,7 @@
             <i class="fab fa-github fa-fw"></i> trezor GitHub
           </a>
         </li>
-        <li  class="list-inline-item">
+        <li  class="list-inline-item pb-2">
           <a
             href="https://www.zinntikumugai.com/donation/"
             target="_blank"
