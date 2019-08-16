@@ -21,7 +21,8 @@
                 <b-img
                   v-if="coin.uptime"
                   :src="`https://img.shields.io/uptimerobot/ratio/${coin.uptime}.svg?style=flat-square&label=`"
-                /><b-img
+                />
+                <b-img
                   v-if="coin.uptime"
                   :src="`https://img.shields.io/uptimerobot/status/${coin.uptime}.svg?style=flat-square&label=`"
                 />
@@ -41,7 +42,8 @@
                 <b-img
                   v-if="coin.uptime"
                   :src="`https://img.shields.io/uptimerobot/ratio/${coin.uptime}.svg?style=flat-square&label=`"
-                /><b-img
+                />
+                <b-img
                   v-if="coin.uptime"
                   :src="`https://img.shields.io/uptimerobot/status/${coin.uptime}.svg?style=flat-square&label=`"
                 />
@@ -53,34 +55,45 @@
       </div>
     </div>
     <div class="text-center pb-5">
-      <a
-        href="https://twitter.com/uesitananame55"
-        target="_blank"
-        class="btn bg-twitter text-white"
-      >
-        <i class="fab fa-twitter fa-fw"></i> @uesitananame55
-      </a>
-      <a
-        href="https://github.com/zinntikumugai/blockbook"
-        target="_blank"
-        class="btn bg-github text-white"
-      >
-        <i class="fab fa-github fa-fw"></i> zinntikumugai GitHub
-      </a>
-      <a
-        href="https://github.com/trezor/blockbook"
-        target="_blank"
-        class="btn bg-github text-white"
-      >
-        <i class="fab fa-github fa-fw"></i> trezor GitHub
-      </a>
-      <a
-        href="https://www.zinntikumugai.com/donation/"
-        target="_blank"
-        class="btn bg-info text-white"
-      >
-        <i class="fas fa-donate"></i> Donation
-      </a>
+      <ul class="list-inline">
+        <li  class="list-inline-item">
+          <a
+            :href="`https://twitter.com/${sns.twitter}`"
+            target="_blank"
+            class="btn bg-twitter text-white"
+          >
+            <i class="fab fa-twitter fa-fw"></i>
+            {{sns.twitter}}
+          </a>
+        </li>
+        <li  class="list-inline-item">
+          <a
+            href="https://github.com/zinntikumugai/blockbook"
+            target="_blank"
+            class="btn bg-github text-white"
+          >
+            <i class="fab fa-github fa-fw"></i> zinntikumugai GitHub
+          </a>
+        </li>
+        <li  class="list-inline-item">
+          <a
+            href="https://github.com/trezor/blockbook"
+            target="_blank"
+            class="btn bg-github text-white"
+          >
+            <i class="fab fa-github fa-fw"></i> trezor GitHub
+          </a>
+        </li>
+        <li  class="list-inline-item">
+          <a
+            href="https://www.zinntikumugai.com/donation/"
+            target="_blank"
+            class="btn bg-info text-white"
+          >
+            <i class="fas fa-donate"></i> Donation
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="pb-5 text-center">&copy; 2019 blockbook.ovh</div>
   </div>
@@ -96,6 +109,9 @@ export default {
   components: {},
   async asyncData() {
     return {
+      sns: {
+        twitter: "CurrencyOvh"
+      },
       maintenance: false,
       coinsMainNet: [
         {
